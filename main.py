@@ -33,3 +33,6 @@ def perf():
 
 root.title('Real Time Currency Ex Converter')
 intro = Label(root, text=" REAL TIME CURRENCY CONVERTER").pack()
+
+url = 'http://api.exchangeratesapi.io/v1/latest?access_key=cd56b14c086000d5df3890edb0dbc71b&format=1'
+converter = cc(url)
