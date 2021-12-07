@@ -17,3 +17,16 @@ class cc():
 	        amount = round(amount * self.currencies[to_currency], 2) 
 	        return amount
 root = Tk()
+root.geometry("400x400")
+def perf():
+	global amt, from_curr, to_curr
+	from_curr = from_currency_dropdown.get()
+	to_curr = to_currency_dropdown.get()
+	amt = float(amount_field.get())
+
+	date = date_box.get()
+	url = 'http://api.exchangeratesapi.io/v1/'+date+'?access_key=cd56b14c086000d5df3890edb0dbc71b&format=1'
+	converter = cc(url)
+	converted_amount = converter.convert(from_curr,to_curr,amt)
+	converted_amount_field.delete(0, END)
+	converted_amount_field.insert(0, str(converted_amount) + ' ' + str(to_curr))
