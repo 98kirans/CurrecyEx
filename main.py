@@ -55,6 +55,11 @@ date_box = Entry(root, width = 15)
 date_box.pack()
 
 
+convert_button = Button(root, text = "Convert", fg = "teal", command = perf).pack()
+converted_amount_field_label = Label(root, text = 'Converted Amount').pack()
+converted_amount_field = Entry(root, width = 15)
+converted_amount_field.pack()
+
 
 
 root.mainloop()
