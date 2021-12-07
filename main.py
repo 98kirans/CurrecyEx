@@ -63,6 +63,12 @@ converted_amount_field_label = Label(root, text = 'Converted Amount').pack()
 converted_amount_field = Entry(root, width = 15)
 converted_amount_field.pack()
 
+chart_label = Label(root, text = 'Enter No. of days to view chart comparison').pack()
+chart_field = Entry(root, width = 5)
+chart_field.pack()
+
+chart_button = Button(root, text = "View Chart", fg = "teal", command = display_chart).pack()
+
 def get_yearly_rates(amount, currency, converted_currency, amount_of_days) :
 	today_date = datetime.datetime.now()
 	date_1year = (today_date - datetime.timedelta(days=1 * amount_of_days))
