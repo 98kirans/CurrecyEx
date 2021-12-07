@@ -16,3 +16,4 @@ class cc():
 	            amount = amount / self.currencies[from_currency] 
 	        amount = round(amount * self.currencies[to_currency], 2) 
 	        return amount
+root = Tk()
