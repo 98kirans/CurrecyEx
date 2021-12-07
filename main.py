@@ -44,3 +44,17 @@ from_currency_dropdown.pack()
 to_currency_label = Label(root, text = "Select To Currency").pack()
 to_currency_dropdown =ttk.Combobox(root,values=list(converter.currencies.keys()), width = 12)
 to_currency_dropdown.pack()
+
+amount_label = Label(root, text = "Enter Amount").pack()
+amount_field = Entry(root, width = 15)
+amount_field.pack()
+
+date_label = Label(root, text = "Enter Date(YYYY-MM-DD) or latest").pack()
+date_box = StringVar()
+date_box = Entry(root, width = 15)
+date_box.pack()
+
+
+
+
+root.mainloop()
