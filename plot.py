@@ -10,3 +10,5 @@ x = np.linspace(a,b,pts)
 
 y= x**2
 plt.plot(x,y)
+
+#comments
