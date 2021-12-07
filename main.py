@@ -30,3 +30,6 @@ def perf():
 	converted_amount = converter.convert(from_curr,to_curr,amt)
 	converted_amount_field.delete(0, END)
 	converted_amount_field.insert(0, str(converted_amount) + ' ' + str(to_curr))
+
+root.title('Real Time Currency Ex Converter')
+intro = Label(root, text=" REAL TIME CURRENCY CONVERTER").pack()
