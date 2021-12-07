@@ -36,3 +36,11 @@ intro = Label(root, text=" REAL TIME CURRENCY CONVERTER").pack()
 
 url = 'http://api.exchangeratesapi.io/v1/latest?access_key=cd56b14c086000d5df3890edb0dbc71b&format=1'
 converter = cc(url)
+
+from_currency_label = Label(root, text = "Select From Currency").pack()
+from_currency_dropdown =ttk.Combobox(root ,values=list(converter.currencies.keys()), width = 12)
+from_currency_dropdown.pack()
+
+to_currency_label = Label(root, text = "Select To Currency").pack()
+to_currency_dropdown =ttk.Combobox(root,values=list(converter.currencies.keys()), width = 12)
+to_currency_dropdown.pack()
