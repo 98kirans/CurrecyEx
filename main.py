@@ -48,11 +48,11 @@ from_currency_label = Label(root, text = "Select From Currency").pack()
 from_currency_dropdown =ttk.Combobox(root ,values=list(converter.currencies.keys()), width = 12)
 from_currency_dropdown.pack()
 
-to_currency_label1 = Label(root, text = "Select To Currency").pack()
+to_currency_label1 = Label(root, text = "Select First To Currency").pack()
 to_currency_dropdown1 =ttk.Combobox(root,values=list(converter.currencies.keys()), width = 12)
 to_currency_dropdown1.pack()
 
-to_currency_label2 = Label(root, text = "Select Second to Currency").pack()
+to_currency_label2 = Label(root, text = "Select Second To Currency").pack()
 to_currency_dropdown2 =ttk.Combobox(root,values=list(converter.currencies.keys()), width = 12)
 to_currency_dropdown2.pack()
 
