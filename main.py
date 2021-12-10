@@ -86,7 +86,8 @@ chart_label = Label(root, text = 'Enter No. of days to view chart comparison').p
 chart_field = Entry(root, width = 5)
 chart_field.pack()
 
-chart_button = Button(root, text = "View Chart", fg = "teal", command = display_chart).pack()
+chart_button1 = Button(root, text = "View Chart 1", fg = "teal", command = display_chart1).pack()
+chart_button2 = Button(root, text = "View Chart 2", fg = "teal", command = display_chart2).pack()
 
 def get_yearly_rates(amount, currency, converted_currency, amount_of_days) :
 	today_date = datetime.datetime.now()
