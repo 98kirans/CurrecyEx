@@ -19,7 +19,7 @@ class cc():
         return amount
     	
 root = Tk()
-root.geometry("400x400")
+root.geometry("400x500")
 
 def perf():
     global amt, from_curr, to_curr1, to_curr2
