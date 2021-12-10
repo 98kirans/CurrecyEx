@@ -69,6 +69,9 @@ date_box.pack()
 def display_chart():
 	get_yearly_rates(amt, from_curr, to_curr, int(chart_field.get()))
 
+def display_chart2():
+    get_yearly_rates(1, from_curr, to_curr2, int(chart_field.get()))
+
 convert_button = Button(root, text = "Convert", fg = "teal", command = perf).pack()
 converted_amount_field_label = Label(root, text = 'Converted Amount').pack()
 converted_amount_field = Entry(root, width = 15)
