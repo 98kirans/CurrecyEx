@@ -73,9 +73,14 @@ def display_chart2():
     get_yearly_rates(1, from_curr, to_curr2, int(chart_field.get()))
 
 convert_button = Button(root, text = "Convert", fg = "teal", command = perf).pack()
-converted_amount_field_label = Label(root, text = 'Converted Amount').pack()
-converted_amount_field = Entry(root, width = 15)
-converted_amount_field.pack()
+
+converted_amount_field1_label1 = Label(root, text = 'Converted Amount of First Currency').pack()
+converted_amount_field1 = Entry(root, width = 15)
+converted_amount_field1.pack()
+
+converted_amount_field_label2 = Label(root, text = 'Converted Amount of Second Currency').pack()
+converted_amount_field2 = Entry(root, width = 15)
+converted_amount_field2.pack()
 
 chart_label = Label(root, text = 'Enter No. of days to view chart comparison').pack()
 chart_field = Entry(root, width = 5)
