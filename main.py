@@ -22,16 +22,16 @@ root = Tk()
 root.geometry("400x400")
 
 def perf():
-	global amt, from_curr, to_curr1, to_curr2
-	from_curr = from_currency_dropdown.get()
-	to_curr1 = to_currency_dropdown.get()
-	to_curr2 = to_currency_dropdown2.get()
-	amt = float(amount_field.get())
+    global amt, from_curr, to_curr1, to_curr2
+    from_curr = from_currency_dropdown.get()
+    to_curr1 = to_currency_dropdown1.get()
+    to_curr2 = to_currency_dropdown2.get()
+    amt = float(amount_field.get())
 
-	date = date_box.get()
-	url = 'http://api.exchangeratesapi.io/v1/'+date+'?access_key=cd56b14c086000d5df3890edb0dbc71b&format=1'
-	converter = cc(url)
-	converted_amount1 = converter.convert(from_curr,to_curr1,amt)
+    date = date_box.get()
+    url = 'http://api.exchangeratesapi.io/v1/'+date+'?access_key=cd56b14c086000d5df3890edb0dbc71b&format=1'
+    converter = cc(url)
+    converted_amount1 = converter.convert(from_curr,to_curr1,amt)
     converted_amount2 = converter.convert(from_curr,to_curr2,amt)
     converted_amount_field1.delete(0, END)
     converted_amount_field1.insert(0, str(converted_amount1) + ' ' + str(to_curr1))
@@ -66,8 +66,8 @@ date_box = Entry(root, width = 15)
 date_box.pack()
 
 	
-def display_chart():
-	get_yearly_rates(amt, from_curr, to_curr, int(chart_field.get()))
+def display_chart1():
+	get_yearly_rates(amt, from_curr, to_curr1, int(chart_field.get()))
 
 def display_chart2():
     get_yearly_rates(1, from_curr, to_curr2, int(chart_field.get()))
