@@ -22,17 +22,21 @@ root = Tk()
 root.geometry("400x400")
 
 def perf():
-	global amt, from_curr, to_curr
+	global amt, from_curr, to_curr1, to_curr2
 	from_curr = from_currency_dropdown.get()
-	to_curr = to_currency_dropdown.get()
+	to_curr1 = to_currency_dropdown.get()
+	to_curr2 = to_currency_dropdown2.get()
 	amt = float(amount_field.get())
 
 	date = date_box.get()
 	url = 'http://api.exchangeratesapi.io/v1/'+date+'?access_key=cd56b14c086000d5df3890edb0dbc71b&format=1'
 	converter = cc(url)
-	converted_amount = converter.convert(from_curr,to_curr,amt)
-	converted_amount_field.delete(0, END)
-	converted_amount_field.insert(0, str(converted_amount) + ' ' + str(to_curr))
+	converted_amount1 = converter.convert(from_curr,to_curr1,amt)
+    converted_amount2 = converter.convert(from_curr,to_curr2,amt)
+    converted_amount_field1.delete(0, END)
+    converted_amount_field1.insert(0, str(converted_amount1) + ' ' + str(to_curr1))
+    converted_amount_field2.delete(0, END)
+    converted_amount_field2.insert(0, str(converted_amount2) + ' ' + str(to_curr2))
 
 root.title('Real Time Currency Ex Converter')
 intro = Label(root, text=" REAL TIME CURRENCY CONVERTER").pack()
